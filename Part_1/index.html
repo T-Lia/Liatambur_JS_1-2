@@ -6,23 +6,31 @@
 </head>
 <body>
 <script>
+    function isNumber (x) {
+        return +x == x;
+    }
+
 	function pow (a, b) {        
-        if (b==0) {
+        if (b == 0) {
             return 1;
         }
         
         var result;
         result = 1;
-        for (var i=1; i<=b; i++) {
-            result = b>0 ? result * a : result / a;
+        for (var i = 1; i <= b; i++) {
+            result = b > 0 ? result * a : result / a;
         }
-        return result;       
+        return result;          
     }
 
     var x = prompt ('Enter base:', '');
     var y = prompt ('Enter exponent:', '');
-    
-    console.log('Result = ', pow(x, y));    	
+
+    if (isNumber (x) && isNumber (y)) {
+        console.log ('Result = ', pow(x, y));        
+    } else {
+        alert ('It is not number');
+    }
 
 </script>
 </body>
