@@ -2,28 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Index_2</title>
+	<title>HW_1-2, Part_2</title>
+	<script src="js/script.js"></script>
 </head>
 <body>
-<script>
 
-	function checkName (someArray, element) {
-		for (var i = 0; i < someArray.length; i++) {
-			if (someArray[i] == element)  
-				return true;
-		}
-		return false;
-	}
-
-	var names = [];
-	for (var i = 0; i < 5; i++) {
-		names.push(prompt('Введите любое имя:', ''));		
-	}
-
-	var userName = prompt ('Введите имя пользователя:', '');
-	
-	alert (checkName (names, userName) ? userName + ', вы успешно вошли.' : 'Все пропало...');
-
-</script>
 </body>
 </html>
